@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta name="description" content="Angular Material: UI Components">
+
+    <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.css"/>
+
+  </head>
+  <body ng-app="MyApp" ng-cloak layout="column">
+
+    <md-toolbar>    
+      <h3>Angular Material Starter</h3>
+    </md-toolbar>
+
+    <div class="container" layout="row" flex>
+        <md-sidenav md-is-locked-open="true" class="md-whiteframe-z2">
+          <md-list>
+            <md-list-item >
+                <md-button>
+                  <md-icon md-svg-src="https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/avatar-1.svg" class="avatar"></md-icon>
+                  Lia Luogo
+                </md-button>
+            </md-list-item>
+
+            <md-list-item >
+                <md-button>
+                  <md-icon md-svg-src="https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/avatar-4.svg" class="avatar"></md-icon>
+                  Lawrence Ray
+                </md-button>
+            </md-list-item>
+
+          </md-list>
+        </md-sidenav>
+        <md-content flex id="content" class="lightgreen" flex>
+          <md-icon md-svg-icon="https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/avatar-1.svg" class="avatar"></md-icon>
+          <h2>Lia Luogo</h2>
+          <p>
+            I love cheese, especially airedale queso. Cheese and biscuits halloumi cauliflower cheese cottage cheese
+            swiss boursin fondue caerphilly. Cow port-salut camembert de normandie macaroni cheese feta who moved my
+            cheese babybel boursin. Red leicester roquefort boursin squirty cheese jarlsberg blue castello caerphilly
+            chalk and cheese. Lancashire.
+          </p>
+        </md-content>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-aria.min.js"></script>
+    <script src="https://rawgit.com/angular/bower-material/master/angular-material.js"></script>
+
+    <script>
+    angular
+      .module('MyApp', ['ngMaterial'])
+      .config(function($sceProvider) {
+      // ngMaterial $mdIconProvider will be updated  to mark urls as         safe.
+      // Meanwhile, disable $sce for ngMaterial CodePen Demos that           using external SVGs
+      $sceProvider.enabled(false);
+      })
+      .run(function($log){
+        $log.debug("MyApp is ready!");
+      });
+    </script>
+    
+  </body>
+</html>
