@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" >
   <head>
-    <meta name="description" content="Angular Material: Containers with the Layout API">
+    <meta name="description" content="Angular Material: Installing with NPM">
 
-    <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.css"/>
+    <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.min.css"/>
 
   </head>
-  <body ng-app="MyApp" ng-cloak layout="column">
-
-    <md-toolbar>    
-      <h1>Angular Material Starter</h1>
-    </md-toolbar>
-
-    <div class="container" layout="row" flex>
-        <md-sidenav md-is-locked-open="true" class="lightblue">Sidenav</md-sidenav>
-        <md-content flex id="content" class="lightgreen" flex>Content</md-content>
-    </div>
+  <body ng-app="MyApp" >
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-animate.js"></script>
@@ -29,6 +20,6 @@
         $log.debug("MyApp is ready!");
       });
     </script>
-    
+    <script src="script.js"></script>
   </body>
 </html>
