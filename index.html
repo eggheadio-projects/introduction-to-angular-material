@@ -5,24 +5,25 @@
 
     <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.css"/>
     <link rel="stylesheet" href="https://rawgit.com/angular/material-start/es5-tutorial/app/assets/app.css"/>
+    <link rel=“stylesheet” href=“app.css”>
 
   </head>
   <body ng-app="MyApp" ng-cloak layout="column" ng-controller="UserController as ul">
 
-    <md-toolbar layout="row">    
+    <md-toolbar layout="row">
         <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
             <md-icon md-svg-icon="menu" ></md-icon>
-        </md-button>      
+        </md-button>
         <h3>Angular Material Starter</h3>
     </md-toolbar>
 
     <div class="container" layout="row" flex>
-        <md-sidenav 
-          ng-click="ul.toggleList()" 
+        <md-sidenav
+          ng-click="ul.toggleList()"
           md-component-id="left"
-          md-is-locked-open="$mdMedia('gt-sm')" 
+          md-is-locked-open="$mdMedia('gt-sm')"
           class="md-whiteframe-4dp" >
-          
+
           <md-list>
             <md-list-item ng-repeat="u in ul.users">
                 <md-button ng-click="ul.selectUser(u)" ng-class="{'selected' : u === ul.selected }">
@@ -71,7 +72,6 @@
       });
     </script>
     <script src="script.js"></script>
-    <link rel=“stylesheet” href=“app.css”>
-    
+
   </body>
 </html>
