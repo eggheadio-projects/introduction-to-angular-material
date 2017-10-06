@@ -16,9 +16,20 @@
     <script>
     angular
       .module('MyApp', ['ngMaterial'])
-      .run(function($log){
-        $log.debug("MyApp is ready!");
+      .run(function(){
+        console.log("MyApp is ready!") || displayInPreview("MyApp is ready!");
       });
+
+
+
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}
     </script>
+    
   </body>
 </html>
